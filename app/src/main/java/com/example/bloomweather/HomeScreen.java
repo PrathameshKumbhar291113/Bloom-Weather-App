@@ -177,7 +177,6 @@ public class HomeScreen extends AppCompatActivity {
                         cityName = city;
                     }else{
                         Log.d("TAG","CITY NOT FOUND");
-                        Toast.makeText(this, "City Not Found", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
