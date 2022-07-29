@@ -156,7 +156,7 @@ public class HomeScreen extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(HomeScreen.this, "Enter valid city name", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(HomeScreen.this, "", Toast.LENGTH_SHORT).show();
             }
         });
 
