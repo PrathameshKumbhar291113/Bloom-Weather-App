@@ -41,6 +41,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class HomeScreen extends AppCompatActivity {
+    //API KEY = e0e603f6636b40128f1163156220608
     private RelativeLayout homeRL;
     private ProgressBar loadingPB;
     private TextView cityNameTV , temperatureTV , conditionTV;
@@ -111,7 +112,7 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     private void getWeatherInfo(String cityName){
-        String url = "https://api.weatherapi.com/v1/forecast.json?key=5633367dcb444d798c9152351221702&q="+ cityName+"&days=1&aqi=no&alerts=no";
+        String url = "https://api.weatherapi.com/v1/forecast.json?key=e0e603f6636b40128f1163156220608&q="+ cityName+"&days=1&aqi=no&alerts=no";
 
      cityNameTV.setText(cityName);
         RequestQueue requestQueue = Volley.newRequestQueue(HomeScreen.this);
@@ -175,9 +176,9 @@ public class HomeScreen extends AppCompatActivity {
                     String city = adr.getLocality();
                     if(city!=null && !city.equals("")){
                         cityName = city;
-                    }else{
-                        Log.d("TAG","CITY NOT FOUND");
                     }
+                    //                        Log.d("TAG","CITY NOT FOUND");
+
                 }
             }
         }catch(IOException e){
